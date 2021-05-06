@@ -1,4 +1,8 @@
 spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/dsvendas
+    username: postgres
+    password: 1234567
   jpa:
     properties:
 #      javax:
@@ -9,16 +13,10 @@ spring:
 #            action: create
 #            create-target:  create.sql
         hibernate:
+          jdbc:
+            lob:
+              non_contextual_creation: true
 #          hbm2ddl:
 #            delimiter:  ;
 
-  datasource:
-    url:  jdbc:postgresql://localhost:5432/dsvendas
-    username: postgres
-    password: 1234567
-
-          jdbc:
-            lob:
-              non_contextual_creation:  true
-      hibernate:
         ddl-auto: none
