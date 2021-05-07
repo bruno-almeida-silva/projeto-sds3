@@ -15,7 +15,7 @@ public class SaleDTO implements Serializable {
     private Double amount;
     private LocalDate date;
 
-    private SellerDTO sellerDTO;
+    private SellerDTO seller;
 
     public SaleDTO() { }
 
@@ -25,7 +25,7 @@ public class SaleDTO implements Serializable {
         this.deals = deals;
         this.amount = amount;
         this.date = date;
-        this.sellerDTO = sellerDTO;
+        this.seller = sellerDTO;
     }
 
     public SaleDTO(Sale entity) {
@@ -34,7 +34,7 @@ public class SaleDTO implements Serializable {
         deals = entity.getDeals();
         amount = entity.getAmount();
         date = entity.getDate();
-        sellerDTO = new SellerDTO(entity.getSeller());
+        seller = new SellerDTO(entity.getSeller());
     }
 
     public Long getId() { return id; }
@@ -52,6 +52,6 @@ public class SaleDTO implements Serializable {
     public LocalDate getDate() { return date; }
     public void setDate(LocalDate date) { this.date = date; }
 
-    public SellerDTO getSellerDTO() { return sellerDTO; }
-    public void setSellerDTO(SellerDTO sellerDTO) { this.sellerDTO = sellerDTO; }
+    public SellerDTO getSeller() { return seller; }
+    public void setSeller(SellerDTO sellerDTO) { this.seller = sellerDTO; }
 }
