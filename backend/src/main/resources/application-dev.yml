@@ -9,7 +9,7 @@ spring:
 #        persistence:
 #          schema-generation:
 #            create-source:  metadata
-#         scripts:
+#          scripts:
 #            action: create
 #            create-target:  create.sql
         hibernate:
